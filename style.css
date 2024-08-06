@@ -7,13 +7,14 @@
     /* colors */
     --cyan-300: #8FE3F9;
     --cyan-600: #4D96A9;
+    --cyan-hover:#71C0D4;
     --purple-300: #D9B8FF;
     --purple-600: #855FB1;
+    --purple-hover:#B18BDD;
     --slate-300: #D1D1DF;
     --slate-600: #87879D;
     --slate-900: #28283D;
     --white: #FAFAFA;
-
 }
 
 *{
@@ -32,38 +33,34 @@ h1, h2, button, strong{
 }
 
 nav{
-    /* border:1px solid red; */
     text-align:center;
-    padding-top:3rem;
+    padding-block-start:3rem;
 }
 
 nav img{
-    height: 1.75rem;
+    width: 7.375rem;
 }
 
 header{
     display:grid;
     grid-template-columns: repeat(12, 1fr);
     text-align:center;
-    justify-content:center;
-    padding: 4rem 0 2rem 0;
-    overflow:hidden;
+    padding: 4rem 0 2rem;
 }
 
-header img:nth-child(1){
+header picture{
     grid-column:1 / 13;
     grid-row: 1;
+}
+
+header picture img{
     width:115%;
     max-width: none;
     transform: translateX(-6.5%);
 }
 
-header img:nth-child(2){
+header > img{
     display:none;
-    /* grid-column:7 / 13;
-    grid-row: 1;
-    width: 100%;
-    margin-inline-start: 1rem; */
 }
 
 header section{
@@ -98,6 +95,10 @@ header section div{
     align-items: center;
 }
 
+button{
+    transition: 0.8s ease;
+}
+
 header section button, footer section button{
     padding: 1rem 2.5rem;
     color:var(--white);
@@ -113,12 +114,20 @@ header section button:nth-of-type(1){
     background-color: var(--cyan-600); 
 }
 
+header section button:nth-of-type(1):hover{
+    background-color: var(--cyan-hover); 
+}
+
 header section button:nth-of-type(1) span{
     color:var(--cyan-300);
 }
 
 header section button:nth-of-type(2), footer section button{
     background-color: var(--purple-600);
+}
+
+header section button:nth-of-type(2):hover, footer section button:hover{
+    background-color: var(--purple-hover); 
 }
 
 main{
