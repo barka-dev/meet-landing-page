@@ -195,19 +195,16 @@ main section:last-child p{
     margin-block-start:1rem;
 }
 
-footer{
-    border:1px solid hotpink; 
-}
-
 footer div{
     margin-inline:auto;
     z-index:2;
 }
 
 footer section{
-    background-image:url('assets/mobile/image-footer.jpg');
+    background-image:url('assets/tablet/image-footer.jpg');
     background-repeat:no-repeat;
     background-size:cover;
+    background-position: center;
     background-color:var(--cyan-600);
     margin-block-start:-28px;
     z-index:1; 
@@ -230,12 +227,16 @@ footer section::before {
     bottom: 0;
     background-color:var(--cyan-600);
     pointer-events: none;
-    opacity:.5;
+    opacity:.9;
+}
+
+footer section *{
+    z-index:2;
 }
 
 footer section h2{
     font-size:2rem;
-    line-height:110%; 
+    line-height:110%;    
 }
 
 footer section p{
