@@ -185,7 +185,7 @@ main section:last-child strong{
     font-weight:var(--weight-level-2);
     color:var(--cyan-600);
     font-size:0.75rem;
-    line-height:100%;
+    line-height:110%;
     letter-spacing:4px;
 }
 
@@ -254,4 +254,71 @@ footer section p{
 
 footer section button span{
     color:var(--purple-300);
+}
+
+@media screen and (min-width:768px){
+    header picture img{
+        width:107%;
+        transform: translateX(-3.2%);
+    }
+    header section{
+        grid-column: 3 / 11;
+        margin-block-start: 4.5rem;
+    }
+    
+    header section h1{
+        font-size: 3rem;
+    }
+
+    header section p{
+        grid-column:2 / 12;
+    }
+    
+    header section div{
+        flex-direction:row;
+        justify-content:center;
+    }
+
+    main section:last-child{
+        grid-template-columns:repeat(12, 1fr);
+    }
+
+    main section:last-child strong{
+        grid-column: 3 / 11;
+    }
+
+    main section:last-child h2{
+        grid-column: 3 / 11;
+    }
+
+    main section:last-child p{
+        grid-column: 3 / 11;
+    }
+
+    main section img{
+        grid-column: span 1;
+    }
+
+    main section:last-child *{
+        grid-column:span 4;
+        text-align:center;
+    }
+    
+    main section:last-child strong{
+        font-size:0.875rem;
+    }
+    
+    main section:last-child h2{
+        font-size:2.25rem;
+    }
+
+    footer section{
+        background-image:url('assets/desktop/image-footer.jpg');
+        padding: 4rem 8.25rem;
+    }
+    
+    footer section h2{
+        font-size:2.25rem;   
+    }
+
 }
