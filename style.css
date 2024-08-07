@@ -322,3 +322,47 @@ footer section button span{
     }
 
 }
+
+@media screen and (min-width:1440px){
+    header{
+        gap:2rem;   
+    }
+    
+    header picture{
+        grid-column:span 4;
+        grid-row: 1;
+    }
+    
+    header picture img{
+        width:auto;
+        transform: translateX(-14.5%);
+        align-self:start;
+    }
+    
+    header > img{
+        display:block;
+        grid-column:span 4;
+        grid-row: 1;
+        transform: translateX(6.5%);
+        align-self:end;
+        justify-self:end;
+        margin-block-start:3.5625rem;
+    }
+    
+    header section{
+        grid-column: span 4;
+        grid-row: 1;
+        margin-block-start: 0rem;
+        align-self:center;
+        gap:2rem;
+    }
+    
+    header section h1{
+        font-size: 4rem;
+    }
+    
+    header section *{
+        font-size: 1.125rem;
+        grid-column:1 / 13;
+    }
+}
