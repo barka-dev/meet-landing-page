@@ -133,9 +133,13 @@ header section button:nth-of-type(2):hover, footer section button:hover{
 main{
     padding: 2rem 2rem 4rem;
     display:grid;
+    grid-template-columns:repeat(4, 1fr);
     gap:4rem;
 }
 
+main > * {
+    grid-column:span 4;
+}
 main div, footer div{
     border: 1px solid var(--slate-300);
     color:var(--slate-600);
@@ -365,4 +369,42 @@ footer section button span{
         font-size: 1.125rem;
         grid-column:1 / 13;
     }
+
+    main section:last-child{
+        grid-column: 2 / 4;
+    }
+
+    main section:last-child strong{
+        font-size:1rem;
+    }
+    
+    main section:last-child h2{
+        font-size:2.5rem;
+    }
+    
+    main section:last-child p{
+        font-size:1.125rem;
+        grid-column: 2 / 12;
+    }
+
+    footer section{
+        padding: 7rem 10rem;
+        flex-direction:row;
+        align-items:start;
+        text-align:left;
+        gap:2rem;
+    }
+
+    footer section *{
+        flex: 1;
+    }
+
+    footer section h2{
+        font-size:2.5rem;
+    }
+    
+    footer section p{
+        font-size:1.125rem;
+    }
+
 }
