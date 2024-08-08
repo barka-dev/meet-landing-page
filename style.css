@@ -46,11 +46,13 @@ header{
     grid-template-columns: repeat(12, 1fr);
     text-align:center;
     padding: 4rem 0 2rem;
+    overflow:hidden;
 }
 
 header picture{
     grid-column:1 / 13;
     grid-row: 1;
+    justify-self:start;
 }
 
 header picture img{
@@ -165,7 +167,6 @@ main div::before, footer div::before {
 }
 
 main section{
-    border:1px solid red;
     display:grid;
     grid-template-columns:repeat(12, 1fr);
     gap:1rem;
@@ -178,7 +179,7 @@ main section img{
     border-radius:.5rem;
 }
 
-main section:last-child *{
+main section:last-child > *{
     grid-column:span 12;
     text-align:center;
 }
@@ -282,25 +283,29 @@ footer section button span{
         justify-content:center;
     }
 
+    main{
+        padding: 3.5rem 2.75rem 4rem;
+    }
+    
+    main section:last-child > *{
+        grid-column: 3 / 11;
+    }
+
     main section:last-child strong{
         font-size:0.875rem;
-        grid-column: 3 / 11;
     }
 
     main section:last-child h2{
         font-size:2.25rem;
-        grid-column: 3 / 11;
     }
-
     main section:last-child p{
-        grid-column: 3 / 11;
+        grid-column: 2 / 12;
+        padding-inline:1.5rem
     }
 
     main section img{
         grid-column: span 3;
     }
-
-   
 
     footer section{
         background-image:url('assets/desktop/image-footer.jpg');
@@ -325,7 +330,7 @@ footer section button span{
     
     header picture img{
         width:auto;
-        transform: translateX(-14.5%);
+        transform: translateX(-6.5%);
         align-self:start;
     }
     
@@ -356,8 +361,13 @@ footer section button span{
         grid-column:1 / 13;
     }
 
-    main section:last-child{
-        grid-column: 2 / 4;
+    main{
+        padding: 3.5rem 10rem 4.5rem;
+        gap:4rem;
+    }
+
+    main section:last-child > *{
+        grid-column:4 / 10;
     }
 
     main section:last-child strong{
@@ -366,11 +376,13 @@ footer section button span{
     
     main section:last-child h2{
         font-size:2.5rem;
+        padding-inline:3.1rem;
     }
     
     main section:last-child p{
         font-size:1.125rem;
-        grid-column: 2 / 12;
+        grid-column: 3 / 11;
+        padding-inline:5.5rem;
     }
 
     footer section{
