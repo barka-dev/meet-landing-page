@@ -133,13 +133,10 @@ header section button:nth-of-type(2):hover, footer section button:hover{
 main{
     padding: 2rem 2rem 4rem;
     display:grid;
-    grid-template-columns:repeat(4, 1fr);
+    grid-template-columns:1fr;
     gap:4rem;
 }
 
-main > * {
-    grid-column:span 4;
-}
 main div, footer div{
     border: 1px solid var(--slate-300);
     color:var(--slate-600);
@@ -168,19 +165,21 @@ main div::before, footer div::before {
 }
 
 main section{
+    border:1px solid red;
     display:grid;
-    grid-template-columns:repeat(4, 1fr);
+    grid-template-columns:repeat(12, 1fr);
     gap:1rem;
 }
 
 main section img{
-    grid-column: span 2;
+    grid-column: span 6;
     width:100%;
+    height: auto;
     border-radius:.5rem;
 }
 
 main section:last-child *{
-    grid-column:span 4;
+    grid-column:span 12;
     text-align:center;
 }
 
@@ -283,15 +282,13 @@ footer section button span{
         justify-content:center;
     }
 
-    main section:last-child{
-        grid-template-columns:repeat(12, 1fr);
-    }
-
     main section:last-child strong{
+        font-size:0.875rem;
         grid-column: 3 / 11;
     }
 
     main section:last-child h2{
+        font-size:2.25rem;
         grid-column: 3 / 11;
     }
 
@@ -300,21 +297,10 @@ footer section button span{
     }
 
     main section img{
-        grid-column: span 1;
+        grid-column: span 3;
     }
 
-    main section:last-child *{
-        grid-column:span 4;
-        text-align:center;
-    }
-    
-    main section:last-child strong{
-        font-size:0.875rem;
-    }
-    
-    main section:last-child h2{
-        font-size:2.25rem;
-    }
+   
 
     footer section{
         background-image:url('assets/desktop/image-footer.jpg');
@@ -392,7 +378,7 @@ footer section button span{
         flex-direction:row;
         align-items:start;
         text-align:left;
-        gap:2rem;
+        gap:5rem;
     }
 
     footer section *{
