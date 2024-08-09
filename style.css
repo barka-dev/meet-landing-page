@@ -42,16 +42,15 @@ nav img{
 }
 
 header{
-    display:grid;
-    grid-template-columns: repeat(12, 1fr);
+    display:flex;
+    flex-direction:column;
     text-align:center;
     padding: 4rem 0 2rem;
     overflow:hidden;
+    align-items:center;
 }
 
 header picture{
-    grid-column:1 / 13;
-    grid-row: 1;
     justify-self:start;
 }
 
@@ -66,8 +65,7 @@ header > img{
 }
 
 header section{
-    grid-column: 2 / 12;
-    grid-row: 2;
+    width:85%;
     margin-block-start: 3rem;
     display:grid;
     grid-template-columns:repeat(12, 1fr);
@@ -260,13 +258,16 @@ footer section button span{
     color:var(--purple-300);
 }
 
-@media screen and (min-width:768px){
+@media screen and (600px <= width <= 1024px){
+    header picture{
+        width:107%;
+    }
     header picture img{
         width:107%;
         transform: translateX(-3.2%);
     }
     header section{
-        grid-column: 3 / 11;
+        width:100%;
         margin-block-start: 4.5rem;
     }
     
@@ -275,7 +276,8 @@ footer section button span{
     }
 
     header section p{
-        grid-column:2 / 12;
+        grid-column:3 / 11;
+        padding-inline:1.5rem;
     }
     
     header section div{
@@ -318,15 +320,18 @@ footer section button span{
 
 }
 
-@media screen and (min-width:1440px){
+@media screen and (min-width:1025px){
     header{
+        flex-direction:row;
         gap:2rem;   
     }
-    
-    header picture{
+    header>*{
+        flex:1;
+    }
+    /* header picture{
         grid-column:span 4;
         grid-row: 1;
-    }
+    } */
     
     header picture img{
         width:auto;
@@ -336,8 +341,8 @@ footer section button span{
     
     header > img{
         display:block;
-        grid-column:span 4;
-        grid-row: 1;
+        /* grid-column:span 4;
+        grid-row: 1; */
         transform: translateX(6.5%);
         align-self:end;
         justify-self:end;
@@ -345,8 +350,9 @@ footer section button span{
     }
     
     header section{
-        grid-column: span 4;
-        grid-row: 1;
+        width:auto;
+        /* grid-column: span 4;
+        grid-row: 1; */
         margin-block-start: 0rem;
         align-self:center;
         gap:2rem;
