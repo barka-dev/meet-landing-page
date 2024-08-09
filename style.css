@@ -85,6 +85,8 @@ header section p{
     line-height: 150%;
     color: var(--slate-600);
     grid-column:1 / 13;
+    max-width:28rem;
+    justify-self:center;
 }
 
 header section div{
@@ -196,6 +198,8 @@ main section:last-child h2{
     font-weight:var(--weight-level-2);
     font-size:2rem;
     line-height:110%;
+    max-width:34rem;
+    justify-self:center;
 
 }
 
@@ -204,6 +208,8 @@ main section:last-child p{
     font-size:1rem;
     line-height:150%;
     margin-block-start:1rem;
+    max-width:45rem;
+    justify-self:center;
 }
 
 footer div{
@@ -246,19 +252,24 @@ footer section *{
 
 footer section h2{
     font-size:2rem;
-    line-height:110%;    
+    line-height:110%;
+    max-width:28rem;   
 }
 
 footer section p{
     font-size:1rem;
     line-height:150%; 
+    max-width:23rem;
 }
 
 footer section button span{
     color:var(--purple-300);
 }
 
-@media screen and (600px <= width <= 1024px){
+@media screen and (min-width:600px){
+    header{
+        padding: 4rem 0 4rem;
+    }
     header picture{
         width:107%;
     }
@@ -320,51 +331,51 @@ footer section button span{
 
 }
 
-@media screen and (min-width:1025px){
+@media screen and (min-width:1200px){
+    nav{
+        padding-block-start:5rem;
+    }
+
     header{
         flex-direction:row;
-        gap:2rem;   
     }
-    header>*{
-        flex:1;
-    }
-    /* header picture{
-        grid-column:span 4;
-        grid-row: 1;
-    } */
     
+    header picture{
+        width:auto;
+        align-self:start;
+    }
+
     header picture img{
         width:auto;
         transform: translateX(-6.5%);
-        align-self:start;
+
     }
     
     header > img{
         display:block;
-        /* grid-column:span 4;
-        grid-row: 1; */
         transform: translateX(6.5%);
         align-self:end;
         justify-self:end;
-        margin-block-start:3.5625rem;
+        margin-block-start:3.5625rem
     }
     
     header section{
-        width:auto;
-        /* grid-column: span 4;
-        grid-row: 1; */
         margin-block-start: 0rem;
         align-self:center;
         gap:2rem;
     }
-    
+
+    header section *{
+        grid-column:1 / 13 !important;
+    }
+
     header section h1{
         font-size: 4rem;
     }
     
-    header section *{
+    header section p{
         font-size: 1.125rem;
-        grid-column:1 / 13;
+        padding-inline:.9rem;
     }
 
     main{
@@ -373,7 +384,7 @@ footer section button span{
     }
 
     main section:last-child > *{
-        grid-column:4 / 10;
+        grid-column: 4 / 10;
     }
 
     main section:last-child strong{
@@ -395,6 +406,7 @@ footer section button span{
         padding: 7rem 10rem;
         flex-direction:row;
         align-items:start;
+        justify-content:center;
         text-align:left;
         gap:5rem;
     }
